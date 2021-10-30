@@ -43,6 +43,47 @@ async function fetchRecipes() {
     // in the recipes folder and fetch them from there. You'll need to add their paths to the recipes array.
 
     // Part 1 Expose - TODO
+/*
+    for (let i of recipes){
+      //console.log(recipes[i]);
+      
+      window.fetch(recipes[i])
+      .then(response => response.json())
+      .then(data =>{
+        recipeData[recipes[i]] = data;
+        console.log(recipeData[recipes[i]])
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        reject(true);
+      });
+     
+    }
+    recipes.forEach(async i => {
+      console.log(i);
+      await window.fetch(i)
+      .then(response => response.json())
+      .then(data =>{
+        recipeData[i] = data;
+        console.log(recipeData[i]);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        reject(true);
+      });
+    });*/
+    const recipePromises = recipes.map(async url => {
+      const response = await fetch(url);
+      return(await response.json());
+    });
+    if(recipePromises.length < recipes.length){reject(false);};
+    console.log(recipePromises);
+    for(const i in recipes) {
+      recipeData[recipes[i]] = recipePromises[i];
+    };
+
+    console.log(recipeData);
+    resolve(true);
   });
 }
 
