@@ -158,22 +158,22 @@ class RecipeCard extends HTMLElement {
       let reviewStars = document.createElement('img');
       if(rating < 1){
         //reviewStars.src = '/assets/images/icons/0-star.svg';
-        reviewStars.setAttribute('src', '/assets/images/icons/0-star.svg');
+        reviewStars.setAttribute('src', 'assets/images/icons/0-star.svg');
         reviewStars.alt = '0 stars';
       }else if(rating >= 1 && rating < 2){
-        reviewStars.setAttribute('src', '/assets/images/icons/1-star.svg');
+        reviewStars.setAttribute('src', 'assets/images/icons/1-star.svg');
         reviewStars.alt = '1 stars';
       }else if(rating >= 2 && rating < 3){
-        rreviewStars.setAttribute('src', '/assets/images/icons/2-star.svg');
+        rreviewStars.setAttribute('src', 'assets/images/icons/2-star.svg');
         reviewStars.alt = '2 stars';
       }else if(rating >= 3 && rating < 4){
-        reviewStars.setAttribute('src', '/assets/images/icons/3-star.svg');
+        reviewStars.setAttribute('src', 'assets/images/icons/3-star.svg');
         reviewStars.alt = '3 stars';
       }else if(rating >= 4 && rating < 5){
-        reviewStars.setAttribute('src', '/assets/images/icons/4-star.svg');
+        reviewStars.setAttribute('src', 'assets/images/icons/4-star.svg');
         reviewStars.alt = '4 stars';
       }else if(rating >= 5){
-        reviewStars.setAttribute('src', '/assets/images/icons/5-star.svg');
+        reviewStars.setAttribute('src', 'assets/images/icons/5-star.svg');
         reviewStars.alt = '5 stars';
       }
       ratingDiv.append(reviewStars);
