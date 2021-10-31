@@ -58,22 +58,30 @@ async function fetchRecipes() {
         reject(true);
       });
      
-    }
-    recipes.forEach(async i => {
-      console.log(i);
-      await window.fetch(i)
+    }*/
+    recipes.forEach( i => {
+      //console.log(i);
+       window.fetch(i)
       .then(response => response.json())
       .then(data =>{
         recipeData[i] = data;
-        console.log(recipeData[i]);
+        //console.log(Object.keys(recipeData).length);
+        if(Object.keys(recipeData).length == recipes.length){
+          resolve(true);
+        }
       })
       .catch((error) => {
         console.error('Error:', error);
         reject(true);
       });
-    });*/
+    });
+    /*
     const recipePromises = recipes.map(async url => {
-      const response = await fetch(url);
+      const response = await fetch(url)
+      .catch((error) => {
+        console.error('Error:', error);
+        reject(false);
+      });
       return(await response.json());
     });
     if(recipePromises.length < recipes.length){reject(false);};
@@ -81,9 +89,9 @@ async function fetchRecipes() {
     for(const i in recipes) {
       recipeData[recipes[i]] = recipePromises[i];
     };
-
-    console.log(recipeData);
-    resolve(true);
+    */
+    //console.log(recipeData);
+    
   });
 }
 
@@ -95,6 +103,18 @@ function createRecipeCards() {
   // show any others you've added when the user clicks on the "Show more" button.
 
   // Part 1 Expose - TODO
+  let mainContainer = document.getElementsByTagName('main')[0];
+
+  recipes.forEach(url => {
+    let test = document.createElement('recipe-card');
+    test.data = recipeData[url];
+    mainContainer.appendChild(test);
+    //console.log(document.getElementsByTagName('main')[0]);
+  });
+  
+  
+  
+
 }
 
 function bindShowMore() {

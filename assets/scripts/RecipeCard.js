@@ -1,8 +1,8 @@
 class RecipeCard extends HTMLElement {
   constructor() {
     // Part 1 Expose - TODO
-
-    // You'll want to attach the shadow DOM here
+    super();
+    this.attachShadow({mode: 'open'});
   }
 
   set data(data) {
@@ -86,7 +86,7 @@ class RecipeCard extends HTMLElement {
     styleElem.innerHTML = styles;
 
     // Here's the root element that you'll want to attach all of your other elements to
-    const card = document.createElement('article');
+    const card = document.createElement('article');    
 
     // Some functions that will be helpful here:
     //    document.createElement()
@@ -100,6 +100,110 @@ class RecipeCard extends HTMLElement {
     // created in the constructor()
 
     // Part 1 Expose - TODO
+    
+    // Image
+    let thumbnail = document.createElement('img');
+    
+    let thumbnail_link = searchForKey(data, 'thumbnail');
+    if(thumbnail_link == undefined){
+      thumbnail_link = searchForKey(data, 'thumbnailUrl');
+    }
+    //console.log(thumbnail);
+    thumbnail.src = thumbnail_link;
+    thumbnail.alt = searchForKey(data, 'headline');
+
+    card.appendChild(thumbnail);
+    
+    // Title
+    let title = document.createElement('p');
+
+    title.classList.add('title');
+
+    let title_link = document.createElement('a');
+    title_link.innerHTML = searchForKey(data, 'headline');
+    title_link.href = getUrl(data);
+
+    //console.log(getUrl(data));
+    title.appendChild(title_link);
+    card.appendChild(title);
+
+    // Organization
+    let org = document.createElement('p');
+
+    org.classList.add("organization");
+    org.innerHTML = getOrganization(data);
+
+    card.appendChild(org);
+
+    //Rating if applicable
+    let rating = searchForKey(data, 'ratingValue');
+    //console.log(rating);
+
+    let ratingDiv = document.createElement('div');
+    ratingDiv.classList.add('rating');
+    if(rating != undefined){
+      let avgReview = document.createElement('span');
+      avgReview.innerHTML = rating;
+      ratingDiv.append(avgReview);
+      
+      let reviewStars = document.createElement('img');
+      if(rating < 1){
+        reviewStars.src = '/assets/images/icons/0-star.svg';
+        reviewStars.alt = '0 stars';
+      }else if(rating >= 1 && rating < 2){
+        reviewStars.src = '/assets/images/icons/1-star.svg';
+        reviewStars.alt = '1 stars';
+      }else if(rating >= 2 && rating < 3){
+        reviewStars.src = '/assets/images/icons/2-star.svg';
+        reviewStars.alt = '2 stars';
+      }else if(rating >= 3 && rating < 4){
+        reviewStars.src = '/assets/images/icons/3-star.svg';
+        reviewStars.alt = '3 stars';
+      }else if(rating >= 4 && rating < 5){
+        reviewStars.src = '/assets/images/icons/4-star.svg';
+        reviewStars.alt = '4 stars';
+      }else if(rating >= 5){
+        reviewStars.src = '/assets/images/icons/5-star.svg';
+        reviewStars.alt = '5 stars';
+      }
+      ratingDiv.append(reviewStars);
+
+      let reviewCount = document.createElement('span');
+      reviewCount.innerHTML = '(' + searchForKey(data, 'ratingCount') + ')';
+      ratingDiv.append(reviewCount);
+    }else{
+      let noReviews = document.createElement('span');
+      noReviews.innerHTML = 'No Reviews';
+      ratingDiv.append(noReviews);
+    }
+
+    card.appendChild(ratingDiv);
+
+    //Time
+    let timeDisp = document.createElement('time');
+    timeDisp.innerHTML = convertTime(searchForKey(data, 'totalTime'));
+    
+    //console.log(convertTime(searchForKey(data, 'totalTime')));
+    card.appendChild(timeDisp);
+
+    //Ingredients list
+    let ingredientsList = document.createElement('p');
+    ingredientsList.classList.add('ingredients');
+
+    //console.log(searchForKey(data, 'recipeIngredient'));
+    ingredientsList.innerHTML = createIngredientList(searchForKey(data, 'recipeIngredient'));
+
+    card.appendChild(ingredientsList);
+
+
+
+    console.log("ARTICLE: ", card);
+    
+    this.shadowRoot.appendChild(card);
+    this.shadowRoot.appendChild(styleElem);
+    
+    document.body.appendChild(this.shadowRoot);
+    
   }
 }
 
