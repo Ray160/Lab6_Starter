@@ -1,0 +1,87 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Recipe",
+  "mainEntityOfPage": "https://www.myrecipes.com/recipe/mayonnaise-ice-cream",
+  "name": "Mayonnaise Ice Cream",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2018%2F07%2F26%2FMayonnaise20Ice20Cream204K20Still2001-2000.jpg",
+    "width": 2000,
+    "height": 1125
+  },
+  "datePublished": "2018-07-26T20:23:25.000Z",
+  "description": "That&rsquo;s right, mayonnaise ice cream. Don&rsquo;t knock it &lsquo;till you&rsquo;ve tried it, folks. This simple recipe produces an exceptional ice cream boasting a uniquely delicious flavor, as well as a rich and luscious mouthfeel. In fact, our test kitchen team described this mayo ice cream as a delightful balance of salty, tangy, sweet, and supple. ",
+  "prepTime": null,
+  "cookTime": null,
+  "totalTime": "DT7H25M",
+  "recipeYield": "Serves 8 (serving size: about 1/2 cup)",
+  "recipeIngredient": [
+    "2 cups heavy cream",
+    "1 cup whole milk",
+    "⅔ cup granulated sugar",
+    "½ teaspoon kosher salt",
+    "7 large egg yolks",
+    "½ cup mayonnaise"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Combine cream, milk, sugar, and salt in a saucepan over medium. Bring to a boil, and cook, stirring often, until sugar is dissolved, about 3 minutes. Remove from heat.\n"
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Whisk together egg yolks in a medium bowl. Gradually whisk about one-fourth of hot cream mixture into yolks, whisking constantly. Gradually whisk yolk mixture into remaining cream mixture in saucepan. Cook over medium-low, stirring often, until mixture coats a spoon and a thermometer registers 170&deg;F.\n"
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Remove mixture from heat, and pour through a fine wire-mesh strainer into a bowl. Cover and refrigerate until well chilled, about 4 hours.\n"
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Uncover, and whisk in mayonnaise until smooth. Pour mixture into an ice cream maker; freeze according to manufacturer&rsquo;s instructions. Transfer to a freezer-safe container; cover and freeze until firm, at least 2 hours.\n"
+    }
+  ],
+  "recipeCategory": [],
+  "recipeCuisine": [],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Nicole McLaughlin"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "itemReviewed": "Mayonnaise Ice Cream",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "nutrition": null,
+  "review": [],
+  "video": {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "How to Make Mayonnaise Ice Cream ",
+    "description": "Inspired by Ice Falkirk in the UK, this homemade version of Mayonnaise Ice Cream will rock your tastebuds. ",
+    "uploadDate": "2018-07-27T18:48:55.469Z",
+    "duration": "PT56.683S",
+    "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F429048911%2F26a8944d-f2ae-4ba7-a91b-614c0b49067e%2F02fa61a9-c062-4b09-8336-b6c234ac3dd0%2F1920x1080%2Fmatch%2Fimage.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MyRecipes",
+      "url": "https://www.myrecipes.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.myrecipes.com/img/logo.png",
+        "width": 209,
+        "height": 60
+      },
+      "sameAs": [
+        "https://www.facebook.com/myrecipes/",
+        "https://twitter.com/My_Recipes",
+        "https://www.pinterest.com/myrecipes/",
+        "https://www.instagram.com/myrecipes/"
+      ]
+    },
+    "embedUrl": "https://players.brightcove.net/429048911/default_default/index.html?videoId=5814740362001"
+  }
+}

@@ -108,20 +108,29 @@ class RecipeCard extends HTMLElement {
     if(thumbnail_link == undefined){
       thumbnail_link = searchForKey(data, 'thumbnailUrl');
     }
+    if(thumbnail_link == undefined){
+      thumbnail_link = searchForKey(data, 'contentUrl');
+    }
     //console.log(thumbnail);
-    thumbnail.src = thumbnail_link;
-    thumbnail.alt = searchForKey(data, 'headline');
+    thumbnail.setAttribute('src', thumbnail_link);
+    let name = searchForKey(data, 'headline');
+    
+    if(name == undefined){
+      name = searchForKey(data, 'name');
+    }
+    //console.log(name);
+    thumbnail.setAttribute('alt', name);
 
     card.appendChild(thumbnail);
     
     // Title
     let title = document.createElement('p');
 
-    title.classList.add('title');
+    title.setAttribute('class', 'title');
 
     let title_link = document.createElement('a');
-    title_link.innerHTML = searchForKey(data, 'headline');
-    title_link.href = getUrl(data);
+    title_link.innerHTML = name;
+    title_link.setAttribute('href', getUrl(data));
 
     //console.log(getUrl(data));
     title.appendChild(title_link);
@@ -130,7 +139,7 @@ class RecipeCard extends HTMLElement {
     // Organization
     let org = document.createElement('p');
 
-    org.classList.add("organization");
+    org.setAttribute('class', "organization");
     org.innerHTML = getOrganization(data);
 
     card.appendChild(org);
@@ -140,7 +149,7 @@ class RecipeCard extends HTMLElement {
     //console.log(rating);
 
     let ratingDiv = document.createElement('div');
-    ratingDiv.classList.add('rating');
+    ratingDiv.setAttribute('class', 'rating');
     if(rating != undefined){
       let avgReview = document.createElement('span');
       avgReview.innerHTML = rating;
@@ -148,22 +157,23 @@ class RecipeCard extends HTMLElement {
       
       let reviewStars = document.createElement('img');
       if(rating < 1){
-        reviewStars.src = '/assets/images/icons/0-star.svg';
+        //reviewStars.src = '/assets/images/icons/0-star.svg';
+        reviewStars.setAttribute('src', '/assets/images/icons/0-star.svg');
         reviewStars.alt = '0 stars';
       }else if(rating >= 1 && rating < 2){
-        reviewStars.src = '/assets/images/icons/1-star.svg';
+        reviewStars.setAttribute('src', '/assets/images/icons/1-star.svg');
         reviewStars.alt = '1 stars';
       }else if(rating >= 2 && rating < 3){
-        reviewStars.src = '/assets/images/icons/2-star.svg';
+        rreviewStars.setAttribute('src', '/assets/images/icons/2-star.svg');
         reviewStars.alt = '2 stars';
       }else if(rating >= 3 && rating < 4){
-        reviewStars.src = '/assets/images/icons/3-star.svg';
+        reviewStars.setAttribute('src', '/assets/images/icons/3-star.svg');
         reviewStars.alt = '3 stars';
       }else if(rating >= 4 && rating < 5){
-        reviewStars.src = '/assets/images/icons/4-star.svg';
+        reviewStars.setAttribute('src', '/assets/images/icons/4-star.svg');
         reviewStars.alt = '4 stars';
       }else if(rating >= 5){
-        reviewStars.src = '/assets/images/icons/5-star.svg';
+        reviewStars.setAttribute('src', '/assets/images/icons/5-star.svg');
         reviewStars.alt = '5 stars';
       }
       ratingDiv.append(reviewStars);
@@ -181,17 +191,24 @@ class RecipeCard extends HTMLElement {
 
     //Time
     let timeDisp = document.createElement('time');
-    timeDisp.innerHTML = convertTime(searchForKey(data, 'totalTime'));
+    let rTime = searchForKey(data, 'totalTime');
+    if(rTime != undefined){
+      timeDisp.innerHTML = convertTime(rTime);
+    }
+    
     
     //console.log(convertTime(searchForKey(data, 'totalTime')));
     card.appendChild(timeDisp);
 
     //Ingredients list
     let ingredientsList = document.createElement('p');
-    ingredientsList.classList.add('ingredients');
+    ingredientsList.setAttribute('class', 'ingredients');
 
     //console.log(searchForKey(data, 'recipeIngredient'));
-    ingredientsList.innerHTML = createIngredientList(searchForKey(data, 'recipeIngredient'));
+    let rIngredients = searchForKey(data, 'recipeIngredient');
+    if(rIngredients != undefined){
+      ingredientsList.innerHTML = createIngredientList(rIngredients);
+    }
 
     card.appendChild(ingredientsList);
 
@@ -202,7 +219,7 @@ class RecipeCard extends HTMLElement {
     this.shadowRoot.appendChild(card);
     this.shadowRoot.appendChild(styleElem);
     
-    document.body.appendChild(this.shadowRoot);
+    //document.getElementsByTagName('main')[0].appendChild(this.shadowRoot);
     
   }
 }

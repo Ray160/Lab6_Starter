@@ -1,0 +1,187 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.loveandlemons.com/#organization",
+            "name": "Love and Lemons",
+            "url": "https://www.loveandlemons.com/",
+            "sameAs": [
+                "https://www.facebook.com/lovelemonsfood",
+                "https://www.instagram.com/loveandlemons/",
+                "https://www.pinterest.com/loveandlemons/",
+                "https://twitter.com/lovelemonsfood"
+            ]
+            
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.loveandlemons.com/#website",
+            "url": "https://www.loveandlemons.com/",
+            "name": "Love and Lemons",
+            "description": "Healthy, whole food, vegan and vegetarian recipes",
+            "publisher": {
+                "@id": "https://www.loveandlemons.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": "https://www.loveandlemons.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#primaryimage",
+            "inLanguage": "en-US",
+            "url": "https://cdn.loveandlemons.com/wp-content/uploads/2020/04/hard-boiled-eggs.jpg",
+            "contentUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2020/04/hard-boiled-eggs.jpg",
+            "width": 1160,
+            "height": 1225
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#webpage",
+            "url": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/",
+            "name": "How to Make Hard Boiled Eggs - Love and Lemons",
+            "isPartOf": {
+                "@id": "https://www.loveandlemons.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#primaryimage"
+            },
+            "datePublished": "2020-04-05T14:51:03+00:00",
+            "dateModified": "2021-04-03T23:23:17+00:00",
+            "description": "Learn how to make hard boiled eggs that are easy to peel and have perfect yellow yolks. This easy method works every time!",
+            "breadcrumb": {
+                "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "WebPage",
+                        "@id": "https://www.loveandlemons.com/",
+                        "url": "https://www.loveandlemons.com/",
+                        "name": "Home"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "WebPage",
+                        "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/",
+                        "url": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/",
+                        "name": "How to Make Hard Boiled Eggs"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Article",
+            "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#article",
+            "isPartOf": {
+                "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#webpage"
+            },
+            "author": {
+                "@id": "https://www.loveandlemons.com/#/schema/person/7dfc5cf0c47213d4c46786ada036f116"
+            },
+            "headline": "How to Make Hard Boiled Eggs",
+            "datePublished": "2020-04-05T14:51:03+00:00",
+            "dateModified": "2021-04-03T23:23:17+00:00",
+            "commentCount": 106,
+            "publisher": {
+                "@id": "https://www.loveandlemons.com/#organization"
+            },
+            "image": {
+                "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#primaryimage"
+            },
+            "articleSection": "breakfast,cooking basics,dairy free,fall,gluten free,holiday:,Recipes,snacks &amp; dips,spring,vegetarian",
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#respond"
+                    ]
+                }
+            ],
+            "mainEntityOfPage": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#webpage"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.loveandlemons.com/#/schema/person/7dfc5cf0c47213d4c46786ada036f116",
+            "name": "Jeanine Donofrio",
+            "sameAs": [
+                "https://www.loveandlemons.com/"
+            ]
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "How to Make Hard Boiled Eggs",
+            "author": {
+                "@type": "Person",
+                "name": "Jeanine Donofrio"
+            },
+            "description": "This easy method for how to hard boil eggs works every time! They&#x27;re easy to peel, and they have perfect yellow yolks. Enjoy them as a snack, add them to salads, and more!",
+            "datePublished": "2020-04-05T09:51:03+00:00",
+            "image": [
+                "https://cdn.loveandlemons.com/wp-content/uploads/2020/04/hard-boiled-eggs-500x500.jpg",
+                "https://cdn.loveandlemons.com/wp-content/uploads/2020/04/hard-boiled-eggs-500x375.jpg",
+                "https://cdn.loveandlemons.com/wp-content/uploads/2020/04/hard-boiled-eggs-480x270.jpg",
+                "https://cdn.loveandlemons.com/wp-content/uploads/2020/04/hard-boiled-eggs.jpg"
+            ],
+            "recipeIngredient": [
+                "Large eggs"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Place eggs in a medium pot and cover with cold water by 1 inch. Bring to a boil, then cover the pot and turn the heat off. Let the eggs cook, covered, for 9 to 12 minutes, depending on your desired done-ness (see photo).",
+                    "name": "Place eggs in a medium pot and cover with cold water by 1 inch. Bring to a boil, then cover the pot and turn the heat off. Let the eggs cook, covered, for 9 to 12 minutes, depending on your desired done-ness (see photo).",
+                    "url": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#wprm-recipe-46490-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Transfer the eggs to a bowl of ice water and chill for 14 minutes. This makes the eggs easier to peel. Peel and enjoy!",
+                    "name": "Transfer the eggs to a bowl of ice water and chill for 14 minutes. This makes the eggs easier to peel. Peel and enjoy!",
+                    "url": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#wprm-recipe-46490-step-0-1"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.92",
+                "ratingCount": "124"
+            },
+            "recipeCategory": [
+                "Breakfast",
+                "cooking component",
+                "Snack"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "Hard boiled eggs, How to hard boil eggs, How to make hard boiled eggs, Perfect hard boiled eggs",
+            "@id": "https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/#recipe"
+        }
+    ]
+}

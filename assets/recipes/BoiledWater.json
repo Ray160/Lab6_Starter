@@ -1,0 +1,254 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.loavesanddishes.net/#organization",
+            "name": "Loaves and Dishes",
+            "url": "https://www.loavesanddishes.net/",
+            "sameAs": [
+                "http://www.facebook.com/loavesanddishes.net",
+                "http://www.instagram.com/wendi_loavesanddishes",
+                "https://www.pinterest.com/loavesanddishes/",
+                "https://twitter.com/loavesanddishes"
+            ],
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.loavesanddishes.net/#logo",
+                "inLanguage": "en-US",
+                "url": "https://www.loavesanddishes.net/wp-content/uploads/2015/06/Logo_cutting-board.jpg",
+                "contentUrl": "https://www.loavesanddishes.net/wp-content/uploads/2015/06/Logo_cutting-board.jpg",
+                "width": 392,
+                "height": 719,
+                "caption": "Loaves and Dishes"
+            },
+            "image": {
+                "@id": "https://www.loavesanddishes.net/#logo"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.loavesanddishes.net/#website",
+            "url": "https://www.loavesanddishes.net/",
+            "name": "Loaves and Dishes",
+            "description": "The Unapologetic Comfort Food Site",
+            "publisher": {
+                "@id": "https://www.loavesanddishes.net/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://www.loavesanddishes.net/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://www.loavesanddishes.net/how-to-boil-water/#primaryimage",
+            "inLanguage": "en-US",
+            "url": "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs.jpg",
+            "contentUrl": "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs.jpg",
+            "width": 760,
+            "height": 1013,
+            "caption": "Boiling Hot Water"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.loavesanddishes.net/how-to-boil-water/#webpage",
+            "url": "https://www.loavesanddishes.net/how-to-boil-water/",
+            "name": "HOW TO BOIL WATER &bull; Loaves and Dishes",
+            "isPartOf": {
+                "@id": "https://www.loavesanddishes.net/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.loavesanddishes.net/how-to-boil-water/#primaryimage"
+            },
+            "datePublished": "2019-04-01T13:20:29+00:00",
+            "dateModified": "2020-01-14T00:32:20+00:00",
+            "description": "All the ways to boil water! Crystal clear, wonderful, clean drinking and cooking water. Water for recipes and MORE! Check it out..",
+            "breadcrumb": {
+                "@id": "https://www.loavesanddishes.net/how-to-boil-water/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://www.loavesanddishes.net/how-to-boil-water/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.loavesanddishes.net/how-to-boil-water/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.loavesanddishes.net/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Recipes",
+                    "item": "https://www.loavesanddishes.net/category/recipes/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "How to",
+                    "item": "https://www.loavesanddishes.net/category/recipes/howto/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "HOW TO BOIL WATER"
+                }
+            ]
+        },
+        {
+            "@type": "Article",
+            "@id": "https://www.loavesanddishes.net/how-to-boil-water/#article",
+            "isPartOf": {
+                "@id": "https://www.loavesanddishes.net/how-to-boil-water/#webpage"
+            },
+            "author": {
+                "@id": "https://www.loavesanddishes.net/#/schema/person/fff94a5edee96fda123550c3077be043"
+            },
+            "headline": "HOW TO BOIL WATER",
+            "datePublished": "2019-04-01T13:20:29+00:00",
+            "dateModified": "2020-01-14T00:32:20+00:00",
+            "wordCount": 1741,
+            "commentCount": 7,
+            "publisher": {
+                "@id": "https://www.loavesanddishes.net/#organization"
+            },
+            "image": {
+                "@id": "https://www.loavesanddishes.net/how-to-boil-water/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs.jpg",
+            "keywords": [
+                "clean water",
+                "water advisory"
+            ],
+            "articleSection": [
+                "Easy Comfort Food Recipes",
+                "Healthy",
+                "How to"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://www.loavesanddishes.net/how-to-boil-water/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.loavesanddishes.net/#/schema/person/fff94a5edee96fda123550c3077be043",
+            "name": "Wendi Spraker",
+            "description": "Wendi is the writer, CEO and dishwasher at Loaves and Dishes! When not in the kitchen or behind the computer, you can find Wendi serving on International Food Conference Boards, Speaking at various conferences, Leading and Cooking for the local Arts Council's \"Taste of Stokes\" events or donating home cooked goodies to various local non profits such as the Danbury Songwriters and Stokes Partnership for Children. Wendi is also a Registered Nurse and serves on her town's board of councilmen.",
+            "sameAs": [
+                "https://www.loavesanddishes.net/about-wendi-spraker/",
+                "https://www.facebook.com/loavesanddishes.net",
+                "https://twitter.com/loavesanddishes"
+            ]
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "How to Boil Water",
+            "author": {
+                "@type": "Person",
+                "name": "Wendi Spraker"
+            },
+            "description": "Clean, glistening perfect water to use in all your recipes.  This is how to do it!  You\u2019ll be a real Pioneer Woman in the kitchen after this!",
+            "datePublished": "2019-04-01T09:20:29+00:00",
+            "image": [
+                "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs.jpg",
+                "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs-500x500.jpg",
+                "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs-500x375.jpg",
+                "https://www.loavesanddishes.net/wp-content/uploads/2018/06/1-760-Southern-Deviled-Eggs-480x270.jpg"
+            ],
+            "video": {
+                "name": "How To Boil Water",
+                "description": "This video describes how to boil water.",
+                "thumbnailUrl": "https://mediavine-res.cloudinary.com/video/upload/s--gUvQ6Et0--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1554123707/vzogheyqdsgipkdqz8ds.jpg",
+                "contentUrl": "https://embed.mediavine.com/videos/vzogheyqdsgipkdqz8ds",
+                "uploadDate": "2019-04-01T13:10:45+00:00",
+                "duration": "PT37S",
+                "@type": "VideoObject"
+            },
+            "recipeYield": [
+                "4",
+                "4 servings"
+            ],
+            "prepTime": "PT2M",
+            "cookTime": "PT15M",
+            "totalTime": "PT17M",
+            "recipeIngredient": [
+                "\u00bd Gallon of Water"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Place the water into a medium sized clean saucepan.",
+                    "name": "Place the water into a medium sized clean saucepan.",
+                    "url": "https://www.loavesanddishes.net/how-to-boil-water/#wprm-recipe-9385-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Heat over high heat with the lid on until steam begins to sputter at the sides of the lid.",
+                    "name": "Heat over high heat with the lid on until steam begins to sputter at the sides of the lid.",
+                    "url": "https://www.loavesanddishes.net/how-to-boil-water/#wprm-recipe-9385-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Remove the lid and watch for boiling to begin (the water will first steam, then simmer with small bubbles popping up to the top and finally large rolling bubbles that you can\u2019t stir away will begin).  If you are heating water for safety reasons, continue the full rolling boil for 1 full minute, and at higher elevations, 3 full minutes.",
+                    "name": "Remove the lid and watch for boiling to begin (the water will first steam, then simmer with small bubbles popping up to the top and finally large rolling bubbles that you can\u2019t stir away will begin).  If you are heating water for safety reasons, continue the full rolling boil for 1 full minute, and at higher elevations, 3 full minutes.",
+                    "url": "https://www.loavesanddishes.net/how-to-boil-water/#wprm-recipe-9385-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Turn the heatsource off and remove the saucepan.  Use for intended use.",
+                    "name": "Turn the heatsource off and remove the saucepan.  Use for intended use.",
+                    "url": "https://www.loavesanddishes.net/how-to-boil-water/#wprm-recipe-9385-step-0-3"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "ratingCount": "2"
+            },
+            "recipeCategory": [
+                "drink"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "how to boil water, boiling water",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "servingSize": "1 0z",
+                "calories": "1 kcal",
+                "sodiumContent": "23 mg"
+            },
+            "@id": "https://www.loavesanddishes.net/how-to-boil-water/#recipe",
+            "isPartOf": {
+                "@id": "https://www.loavesanddishes.net/how-to-boil-water/#article"
+            },
+            "mainEntityOfPage": "https://www.loavesanddishes.net/how-to-boil-water/#webpage"
+        }
+    ]
+}
