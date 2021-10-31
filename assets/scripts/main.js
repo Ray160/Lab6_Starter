@@ -108,12 +108,18 @@ function createRecipeCards() {
   // Part 1 Expose - TODO
   let mainContainer = document.getElementsByTagName('main')[0];
 
+  let i = 0;
   recipes.forEach(url => {
-    let test = document.createElement('recipe-card');
-    test.data = recipeData[url];
-    mainContainer.appendChild(test);
+    
+    if(i < 3){
+      let test = document.createElement('recipe-card');
+      test.data = recipeData[url];
+      mainContainer.appendChild(test);
+    }
+    i++
     //console.log(document.getElementsByTagName('main')[0]);
   });
+
   
   
   
@@ -129,4 +135,26 @@ function bindShowMore() {
   // in the recipeData object where you stored them/
 
   // Part 2 Explore - TODO
+  let button = document.getElementsByTagName('button')[0];
+  let mainContainer = document.getElementsByTagName('main')[0];
+
+  button.addEventListener('click', function(){
+    if(button.innerHTML == 'Show more'){
+      for(let i = 0; i < 3; i++){
+        let test = document.createElement('recipe-card');
+        test.data = recipeData[recipes[i + 3]];
+        mainContainer.appendChild(test);
+      }
+      button.innerHTML = 'Show less';
+    }else{
+      let cards = document.getElementsByTagName('recipe-card');
+      let cardsLength = cards.length;
+      console.log(cards);
+      for(let i = 0; i < 3; i++){
+        cards[cardsLength - i - 1].remove();
+        console.log(cards);
+      }
+      button.innerHTML = 'Show more';
+    }
+  });
 }
